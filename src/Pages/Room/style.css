@@ -1,0 +1,45 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+.deshBoardwrapper {
+    overflow: hidden;
+}
+
+.roomWrapper {
+    padding : 20px;
+    /* padding-right: 2vw; */
+}
+
+@media (max-width: 991px) {
+    .roomWrapper {
+        padding : 20px;
+        padding-right: 0vw;
+    }
+}
+
+.singleRoomInfo {
+    border: 1px solid rgba(0, 0, 0, 0.301);
+    padding: 50px;
+    border-radius: 10px;
+    background-color: black;
+    color: #fff;
+    padding: 20px 50px 20px 50px; 
+    
+}
+
+.singleRoomInfo p {
+    margin-bottom: 7px;
+}
+
+.image-gallery-slide .image-gallery-image { 
+    height: 400px;
+}
+
+
+.PaybillBtn {
+    background-color: black;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.158);
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 20px;
+}

@@ -1,0 +1,94 @@
+.AdminDeshboardWrapper {
+    z-index: -2;
+   overflow:  hidden !important;
+}
+.RightSitewrapper {
+    overflow: hidden;
+}
+.leftMenu {
+   padding-top: 60px;
+ 
+    height: 100vh;
+
+    
+}
+
+
+.menuList {
+    background-color: rgba(2, 2, 22, 0);
+    color: rgb(0, 0, 0);
+
+   
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.listOfMenu {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: rgba(90, 13, 13, 0.178);
+    cursor: pointer;
+}
+
+.deshboardWrapper {
+    color: black !important;
+    font-size: 80px;
+}
+
+.RightSitewrapper{
+    padding-top: 60px;
+}
+
+.mainPhoto label {
+    cursor: pointer;
+    font-size: 50px;
+}
+.photoVissability {
+    display: none;
+    visibility: none;
+}
+
+
+.img1 {
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s all;
+    overflow: hidden;
+    width: 250px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.imgOverlay {
+    display: none;
+}
+
+.imgOverlay label i {
+    font-size: 50px !important;
+}
+
+.img1:hover .imgOverlay {
+    position: absolute;
+     display: block;
+     top: 0;
+     left: 0;
+     color: #fff !important;
+     transition: 0.5s all;
+     font-size: 50px;
+     background-color: rgba(0, 0, 0, 0.801);
+     width: inherit;
+     padding: 0px ;
+     height: 100%;
+    
+}
+.img1:hover .imgOverlay  {
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer !important;
+}
+
+.img1:hover .imgOverlay .deleteIcon{
+    font-size: 35px;
+    color: red !important;
+    cursor: pointer;
+}

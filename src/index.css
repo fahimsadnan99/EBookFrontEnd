@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Chakra Petch', sans-serif !important;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.548);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(179, 58, 58);
+  border-radius: 0.5rem;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  box-shadow: 2px 5px 10px rgb(44, 44, 44);
+}
+
+
+
+p {
+  margin-bottom: 0;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.Toastify__toast-container {
+  margin-top: 80px !important;
+}
+
+/* ------Calander----- */
+
+.react-datepicker__day--disabled, .react-datepicker__month-text--disabled, .react-datepicker__quarter-text--disabled, .react-datepicker__year-text--disabled {
+  cursor: default;
+  color: #ff0505 !important;
+  background-color: blanchedalmond !important;
+  border-radius: 5px;
+}
+
+
+.react-datepicker__month {
+  background-color: rgba(131, 131, 131, 0.267) !important;
+  color: #fff !important;
+  padding: 5px;
+  border-radius: 10px;
+}
+.react-datepicker__header  {
+  background-color: black !important;
+  color: #fff !important;
+}
+
+.react-datepicker__header  div {
+  color: #fff !important;
+}

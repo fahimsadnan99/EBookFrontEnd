@@ -1,0 +1,382 @@
+.heroWrapper {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(0deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6)), url("../../Assets/Hotel4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+   
+}
+
+.heroWrapper .allElements {
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    color: #fff;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.allElements .heroText1 {
+    font-size: 5.5vw;
+}
+.allElements .heroText2 {
+    text-align: center;
+    font-size: 2.5vw;
+}
+
+
+.heroBtn {
+    background-color: transparent;
+    border : 2px solid #fff;
+    padding : 5px 15px;
+    color : #fff;
+   
+    font-size: 1.8vw;
+    text-align: center;
+    transition: all 0.5s;
+    margin-top: 10vh;
+   
+}
+
+.heroBtn:hover {
+    background-color: #fff;
+    color: rgb(179, 58, 58);
+    transition: all 0.5s;
+}
+
+@media (max-width:768px) {
+    .allElements .heroText1 {
+        font-size: 8.5vw;
+    }
+    .allElements .heroText2 {
+        text-align: center;
+        font-size: 3.5vw;
+    }
+    .heroWrapper .allElements {
+        left: 5%;
+    }
+    .heroWrapper {
+        height: 80vh;
+    }
+}
+
+@media (max-width:580px) {
+    .allElements .heroText1 {
+        font-size: 9vw;
+        
+    }
+    .allElements .heroText2 {
+        text-align: center;
+        font-size: 5vw;
+        margin-top: 10px;
+    }
+    .heroBtn {
+        font-size: 4vw;
+    }
+    .heroWrapper .allElements {
+        left: 5%;
+    }
+
+    .heroWrapper {
+        height: 70vh;
+    }
+    
+}
+
+/* ----------------ROOM SEARCH SECTION -------- */
+
+
+.roomSearchWrapper {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 0.5vw;
+    margin-bottom: 0 auto;
+    border-radius: 0px;
+    width: 40vw;
+   
+    font-family: 'Chakra Petch', sans-serif;
+    color: black;
+    border: 2px solid rgb(179, 58, 58);
+    
+    text-align: center;
+    font-weight: 600 !important;
+    
+   
+    margin: 30px auto;
+  
+    
+    
+}
+
+.srcName {
+    font-size: 1.5vw;
+}
+
+.srcBtn {
+    background-color: blueviolet;
+   
+    width: 70px;
+    height: 30px;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    font-size : 1.5vw;
+    margin-left: 1vw;
+    margin-top: 5px;
+    
+}
+.roomOption {
+    width: 15vw;
+}
+.bookBtnHome {
+    background-color: rgb(0, 0, 0);
+    border: none;
+    padding: 5px 15px;
+    color: #fff;
+    text-align: center;
+    margin: 50px 0px;
+    font-size: 1.5vw;
+}
+
+
+
+@media (max-width: 768px) {
+    .roomSearchWrapper {
+        width: 60vw;
+    }
+    .srcName {
+        font-size: 3vw;
+    }
+    .bookBtnHome {
+        font-size: 3vw;
+    }
+}
+
+@media (max-width: 598px) {
+    .roomSearchWrapper {
+        width: 80vw;
+    }
+    .bookBtnHome {
+        font-size: 6vw;
+    }
+}
+
+
+.whyCard {
+    
+    border: 1px solid rgb(179, 58, 58);
+    padding: 10px;
+   transition: all 0.5s;
+    
+}
+.whyCard p {
+    margin-top: 10px;
+    color: black !important;
+}
+.whyCard:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+.whyCard i {
+    font-size: 5vw;
+    margin-top: 30px;
+    color: rgb(179, 58, 58);
+    
+} 
+
+@media (max-width: 768px) {
+    .whyCard i {
+        font-size: 10vw;
+    }
+}
+.headingOfExperiance {
+    font-size: 3vw;
+    margin-bottom: 10px;
+    color :rgb(0, 0, 0);
+    
+}
+
+.headingOfExperiance::after {
+    content: "";
+    display: block;
+    width: 30%;
+    height: 3px;
+    background-color: rgb(179, 58, 58);
+    margin: 10px auto;
+}
+.experianceImg1 {
+    width: 50%;
+    height: 300px;
+}
+.experianceImg2 {
+    width: 50%;
+    height: 300px;
+    margin-top: 80px;
+}
+@media (max-width: 768px) {
+    .headingOfExperiance {
+        font-size: 6vw;
+    }
+}
+.numInfoWrapper {
+    background: linear-gradient(0deg,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5)), url("../../Assets/Hotel4.jpg");
+    width: 100%;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 80px 0px;
+    background-attachment: fixed;
+}
+
+.numInfoWrapper  {
+    margin-top: 10px;
+     font-size: 5vw !important;
+}
+
+
+.MissonAndVisonWrapper {
+    position: relative;
+    background-color: #fff;
+   
+}
+
+.MissonAndVisonWrapper::after {
+    content: "";
+    width: 10px;
+    height: 100vh;
+    background-color: rgb(179, 58, 58);
+    display: block;
+    margin: 0 auto;
+    border-radius: 30px;
+    margin-top: 40px;
+   
+}
+
+.misson1,.misson2,.misson3,.misson4 {
+    width: 30vw;
+    /* From https://css.glass */
+background: rgba(255, 10, 10, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 10, 10, 0.3);
+padding: 10px;
+color: black;
+text-align: justify;
+height: 100px;
+z-index: 1;
+
+}
+
+.MissonAndVisonWrapper .misson1,.misson2,.misson3,.misson4 {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    
+    
+}
+
+
+
+.MissonAndVisonWrapper .misson1::after , .misson2::after,.misson3::after,.misson4::after {
+    content: "";
+    position: absolute;
+    width: 9vw;
+    height: 10px;
+    background-color: rgb(179, 58, 58);
+    display: block;
+    
+    top: 50px;
+    right: -10vw;
+}
+
+.MissonAndVisonWrapper .misson1::before ,.misson2::before ,.misson3::before, .misson4::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(179, 58, 58);
+    display: block;
+    
+    top: 45px;
+    right: -15px;
+}
+
+
+.MissonAndVisonWrapper .misson2,.misson4 {
+    top: 40%;
+    left: 58vw;
+    height: 130px;
+}
+
+.MissonAndVisonWrapper .misson2::after {
+    top: 50px;
+    left: -120px;
+    width: 120px;
+}
+
+.MissonAndVisonWrapper .misson2::before {
+    top: 45px;
+    left: -15px;
+}
+
+.MissonAndVisonWrapper .misson3 {
+    top: 55%;
+    height: 150px;
+}
+
+.MissonAndVisonWrapper .misson3::after {
+    top: 75px;
+}
+.MissonAndVisonWrapper .misson3::before {
+    top: 70px;
+}
+
+.MissonAndVisonWrapper .misson4 {
+    top: 75%;
+    
+    height: 135px;
+}
+.MissonAndVisonWrapper .misson4::before {
+    top: 55px;
+    left: -15px;
+}
+
+.MissonAndVisonWrapper .misson4::after {
+    top: 60px;
+    left: -120px;
+    width: 120px;
+}
+
+.listOnMission {
+  padding: 20px;
+    text-align: start;
+}
+.listOnMission p {
+    margin-top: 30px;
+}
+@media (max-width: 1280px) {
+    
+  #missionWrapperLarge {
+    display: none;
+  }
+    .MissonAndVisonWrapper::after {
+        display: none;
+    }
+
+    
+}
+
+@media (min-width: 1281px) {
+    
+    .missionWrapperMiduam {
+        display: none;
+    }
+  
+      
+  }

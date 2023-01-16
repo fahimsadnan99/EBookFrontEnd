@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&display=swap');
+.navbarWrapper {
+    background-color: rgba(2, 0, 1, 0.897);
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 99999 !important;
+    
+}
+
+.brandName {
+    color: #fff;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0;
+}
+
+.brandName:hover {
+    color: #fff ;
+    text-decoration: none;
+}
+
+.nav-item .nav-link {
+    color: #fff;
+    font-size: 1.5vw;
+    /* font-weight: bold; */
+    font-family: 'Chakra Petch', sans-serif;
+    margin-left: 5px;
+    border-radius: 5px;
+    padding: 0 3px;
+}
+.nav-item .nav-link:hover {
+   background-color: bisque;
+}
+ .logout{
+   color: bisque !important;
+}
+.activeNavbar {
+    color: rgb(202, 69, 69) !important;
+    background-color: rgb(255, 255, 255);
+    font-size: 1.8vw;
+    /* font-weight: bold; */
+    font-family: 'Chakra Petch', sans-serif;
+    margin-left: 5px;
+    border-radius: 5px;
+   
+    
+}
+.navbar-toggler-icon {
+    background-color: rgb(202, 69, 69);
+    color: #fff;
+    font-size: 24px;
+   
+    padding: 4px 2px;
+    border-radius: 5px;
+
+  
+}
+
+@media (max-width: 768px){
+    .nav-item .nav-link {
+        width: 40vw;
+        font-size: 3vw;
+    }
+}
+
+@media (max-width: 478px){
+    .nav-item .nav-link {
+       
+        font-size: 5vw;
+        width: 40vw;
+    }
+}
+
+
+.footerWrapper {
+    padding: 50px;
+    background-color: rgba(17, 16, 16, 0.76);
+    color: #fff;
+    
+}
+
+.footerLink ul li {
+    list-style-type: none;
+    color: #fff;
+}
+
+.footerLink ul li .footerLink {
+    color: #fff;
+}
+
+.socialLink {
+    display: flex;
+    justify-content: center;
+}
+
+.socialLink i {
+    background-color: rgb(202, 69, 69);
+    color: #fff;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 30px;
+}
+
+.copyright {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
