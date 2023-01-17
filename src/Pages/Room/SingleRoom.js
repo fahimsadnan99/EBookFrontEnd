@@ -45,13 +45,11 @@ const SingleRoom = () => {
     if(!tokens){
      navigate("/signup")
     }
-    // if(tokens){
-    //   if(arg){
-    //   axios.post(`${BaseUrl}/confirm`,arg)
-    // }
+   
     if(tokens){
       navigate("/payment")
     }
+    
     }
     
    
