@@ -3,6 +3,7 @@ import { persistReducer,persistStore} from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import UserReducer from "./Reducers/UserReducer";
 import RoomSlice from "./Reducers/RoomReducer";
+import PaymentSlice from "./Reducers/PaymentReducer"
 
 
 
@@ -16,7 +17,8 @@ const persistConfig = {
 const reducer = combineReducers({
     
     user : UserReducer,
-    room : RoomSlice
+    room : RoomSlice,
+    payment : PaymentSlice
 })
  
 
