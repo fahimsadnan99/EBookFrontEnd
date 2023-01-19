@@ -14,6 +14,14 @@
     font-size: 30px;
     font-weight: bold;
     padding: 0;
+    width: 150px;
+    height: 80px !important;
+ 
+}
+
+.brandName img {
+    width: 100%;
+    height: 100%;
 }
 
 .brandName:hover {

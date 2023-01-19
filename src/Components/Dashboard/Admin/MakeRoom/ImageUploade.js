@@ -14,17 +14,23 @@ const ImageUploade = () => {
   const dispatch = useDispatch();
 
   let imgUpadeHandler = (file, ind) => {
-    setActive(true);
+ setActive(true);
 
-    let form = new FormData();
-    form.append("file", file);
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload=()=>{
+   
     apiAxios
-      .post("/img", form)
+      .post("/img", {img : reader.result})
       .then((res) => {
         setActive(false);
         dispatch(updateImg({ data: res.data, index: ind }));
       })
       .catch((err) => console.log(err));
+    }
+   
+   
+    
   };
 
   const handleDelete = (ind) => {
@@ -36,16 +42,22 @@ const ImageUploade = () => {
   };
 
   const handleUploadFile = (file) => {
-    setActive(true);
-    let form = new FormData();
-    form.append("file", file);
+   setActive(true);
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload=()=>{
+     
     apiAxios
-      .post("/img", form)
+      .post("/img", {img : reader.result})
       .then((res) => {
         setActive(false);
         dispatch(imgUpdate(res.data));
       })
       .catch((err) => console.log(err));
+    }
+
+ 
+   
   };
 
   return (
