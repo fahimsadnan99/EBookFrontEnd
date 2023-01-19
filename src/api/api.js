@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// export const BaseUrl = "https://ebookbackend-production.up.railway.app/api"
-export const BaseUrl = "http://localhost:5000/api"
+export const BaseUrl = "https://fine-jade-katydid-sari.cyclic.app/api"
+// export const BaseUrl = "http://localhost:5000/api"
 
 const apiAxios = axios.create({baseURL : BaseUrl})
 
