@@ -14,7 +14,7 @@ const Deshboard = () => {
   const {rooms,loading,length,filter} = useSelector(state => state.room)
   const dispatch = useDispatch()
  
-console.log(rooms,loading,length,filter);
+
   const roomData = (e) =>{
     console.log(e);
   }

@@ -12,7 +12,7 @@ const RoomsDisplay = () => {
   const {rooms,loading,length} = useSelector(state => state.room)
   const dispatch = useDispatch()
  
-console.log(rooms,loading,length);
+
   
  useEffect(()=>{
   let arg = {
@@ -30,7 +30,7 @@ console.log(rooms,loading,length);
     <div className='container text-center'>
     <div className='row'>
     {
-  rooms.length == 0 && (<h4>Room Not Found</h4>)
+  rooms?.length == 0 && (<h4>Room Not Found</h4>)
  }
     {
       rooms?.map((item)=>{
