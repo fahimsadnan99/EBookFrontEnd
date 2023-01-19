@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Experiance from '../../Components/Home/Experiance'
 import MissonAndVison from '../../Components/Home/MissonAndVison'
 import NumberOfInfo from '../../Components/Home/NumberOfInfo'
@@ -6,9 +6,15 @@ import RoomsDisplay from '../../Components/Home/RoomsDisplay'
 import RoomSearch from '../../Components/Home/RoomSearch'
 import WhyEasyBook from '../../Components/Home/WhyEasyBook'
 import "./style.css"
+import { useDispatch } from 'react-redux'
+import { clearPaymentData } from '../../Redux/Reducers/PaymentReducer'
 
 const Home = () => {
-  
+
+  const dispatch = useDispatch()
+  useEffect(()=>{
+   dispatch(clearPaymentData())
+  },[])
   return (
     <div style={{overflowX : "hidden"}}>
     <div className='heroWrapper'>

@@ -7,8 +7,8 @@ import { useSelector,useDispatch } from "react-redux";
 import {clearImg} from "../../../../Redux/Reducers/RoomReducer"
 import {  toast, ToastContainer } from 'react-toastify';
 
-const city = ["Dhaka", "Chittagong", "Shylate", "Rajshahi"];
-const classes = ["Normal", "Classic", "Royel"];
+const city = ["Dhaka", "Chittagong", "Sylhet"];
+const classes = ["Gold", "Classic", "Royel"];
 const bed = [1, 2, 3, 4];
 const toylet = [1, 2];
 const ac = ["Yes", "No"];

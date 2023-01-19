@@ -25,9 +25,13 @@ console.log(rooms,loading,length);
  },[page])
 
 
+
   return (
     <div className='container text-center'>
     <div className='row'>
+    {
+  rooms.length == 0 && (<h4>Room Not Found</h4>)
+ }
     {
       rooms?.map((item)=>{
         return (

@@ -5,17 +5,28 @@ const paymentSlice = createSlice({
     initialState : {
           date : [],
           tokens : "",
-          roomId : ""
+          roomId : "",
+          amount : 0,
 
     },
     reducers:{
             setPayMentArgument(state,action){
-                console.log(action.payload)
+                state.date = action.payload.date;
+                state.tokens = action.payload.tokens;
+                state.roomId = action.payload.roomId;
+                state.amount = action.payload.amount;
+            },
+
+            clearPaymentData(state,action){
+                state.date = []
+                state.tokens = ""
+                state.roomId = ""
+                state.amount = 0
             }
     }
 })
 
 
 
-export const {setPayMentArgument} = paymentSlice.actions
+export const {setPayMentArgument,clearPaymentData} = paymentSlice.actions
 export default paymentSlice.reducer

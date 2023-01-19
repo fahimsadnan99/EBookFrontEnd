@@ -69,3 +69,13 @@ code {
 .react-datepicker__header  div {
   color: #fff !important;
 }
+
+
+/* ---------pagination--------- */
+.page-item .page-link {
+  color: black;
+}
+.page-item.active .page-link  {
+  background-color: black;
+  color: #fff;
+}

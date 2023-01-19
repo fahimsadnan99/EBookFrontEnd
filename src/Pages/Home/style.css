@@ -153,14 +153,26 @@
     .bookBtnHome {
         font-size: 3vw;
     }
+    .roomOption {
+        width: 30vw;
+    }
 }
 
 @media (max-width: 598px) {
     .roomSearchWrapper {
-        width: 80vw;
+        width: 95vw;
     }
     .bookBtnHome {
         font-size: 6vw;
+    }
+    .roomOption {
+        width: 35vw;
+    }
+    .srcBtn {
+        width: 100px;
+    }
+    .srcBtn i {
+        font-size: 20px;
     }
 }
 
@@ -188,8 +200,10 @@
 } 
 
 @media (max-width: 768px) {
+    
     .whyCard i {
         font-size: 10vw;
+        
     }
 }
 .headingOfExperiance {

@@ -52,17 +52,17 @@ const Footer = () => {
 
     <div className='col-md-4'>
     <h3>Contact Info</h3>
-     <p>Phone : </p>
-    <p>+8801812345678</p>
+     <p className='mb-1'>Phone : </p>
+    <p className='mb-1'>+8801812345678</p>
 
-    <p>Email : </p>
-    <p>EasyInfo@gmail.com</p>
+    <p className='mb-1'>Email : </p>
+    <p className='mb-1'>EasyInfo@gmail.com</p>
    </div>
     </div>
     </div>
     </div>
 
-    <div className='copyright'>CopyRight@2015-2022 EasyBook</div>
+    <div className='copyright'>CopyRight@2015-2022 EasyBook (Fahim Sadnan)</div>
     </div>
   )
 }

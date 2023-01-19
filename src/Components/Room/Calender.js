@@ -13,7 +13,7 @@ const Calender = ({roomPrice,getDate}) => {
 
   const {id} = useParams()
 
- 
+    const [price,setPrice] = useState()
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(null);
     const [totalDay,setTotalday] = useState([]);
@@ -21,7 +21,7 @@ const Calender = ({roomPrice,getDate}) => {
      const [excludeDates,setExcludeDates] = useState([])
      
 
-     
+   
 
   const moment = extendMoment(Moment)
   const onChange = (dates) => {
@@ -54,20 +54,18 @@ const Calender = ({roomPrice,getDate}) => {
       allDates = days
      }
 
-
-        
-    console.log("select", days);
-    console.log("new", allDates);
-    console.log("Data Base", excludeDates);
-
+     let amount = (allDates.length * roomPrice)
+    
+     setPrice(amount)
       setTotalday(allDates)
       setAllDay(days)
-      getDate(days)
+      getDate(allDates,amount)
+      
+    
     }
   };
 
-  
-console.log(totalDay)
+ 
 
   useEffect(()=>{
     axios.get(`${BaseUrl}/confirm/${id}`)
@@ -86,7 +84,7 @@ console.log(totalDay)
     selectsRange
     inline
   />
-  <h5 className='my-3'>Total Tk : {totalDay.length * roomPrice} Tk</h5>
+  <h5 className='my-3'>Total Tk : { price || roomPrice} Tk</h5>
     </div>
   )
 }

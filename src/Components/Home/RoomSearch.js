@@ -45,7 +45,7 @@ const RoomSearch = () => {
             <option value="Dhaka"> Dhaka</option>
             <option value="Chittagong"> Chittagong</option>
         
-            <option value="Shylate"> Shylate</option>
+            <option value="Sylhet"> Sylhet</option>
            
           </select>
 

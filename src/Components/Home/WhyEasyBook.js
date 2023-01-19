@@ -6,7 +6,7 @@ const WhyEasyBook = () => {
     <h1 className='headingOfExperiance mb-5'>Why EasyBook</h1>
     <div className='container mb-5'>
       <div className='row'>
-        <div className='col-sm-6 col-lg-3 '>
+        <div className='col-sm-6 col-lg-3 mb-3'>
         <div className='whyCard'>
         <h5 className='mb-0'>Extensive Hotel Options</h5>
       
@@ -18,18 +18,18 @@ const WhyEasyBook = () => {
 
 
 
-        <div className='col-sm-6 col-lg-3'>
+        <div className='col-sm-6 col-lg-3  mb-3'>
         <div className=' whyCard'>
         <h5 className='mb-0'>Savings on  Booking</h5>
         
         <i class="fa fa-money " aria-hidden="true"></i>
       
-        <p>Enjoy hotel bookings with best offers and discount and make your stay unforgettable.</p>
+        <p>Enjoy hotel bookings with best offers & discount and make your stay.</p>
         </div>
         </div>
 
 
-        <div className='col-sm-6 mt-sm-3 mt-lg-0 col-lg-3 '>
+        <div className='col-sm-6 mt-sm-3 mt-lg-0 col-lg-3 mb-3 '>
         <div className='whyCard'>
         <h5 className='mb-0'>Hotel Ratings</h5>
         
@@ -39,7 +39,7 @@ const WhyEasyBook = () => {
         </div>
         </div>
 
-        <div className='col-sm-6 mt-sm-3 mt-lg-0  col-lg-3'>
+        <div className='col-sm-6 mt-sm-3 mt-lg-0  col-lg-3  '>
         <div className='whyCard'>
         <h5 className='mb-0'>Great Deals on Travel</h5>
         

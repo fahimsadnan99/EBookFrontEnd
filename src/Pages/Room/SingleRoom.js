@@ -6,7 +6,8 @@ import {  useParams, useNavigate } from 'react-router-dom'
 import apiAxios, { BaseUrl } from '../../api/api'
 import axios from 'axios'
 import ImageGallery from 'react-image-gallery';
-import { useSelector } from 'react-redux'
+import { useSelector ,useDispatch} from 'react-redux'
+import { setPayMentArgument } from '../../Redux/Reducers/PaymentReducer'
 
 
 const SingleRoom = () => {
@@ -17,6 +18,7 @@ const SingleRoom = () => {
   const [arg,setArg] = useState()
   const {tokens} = useSelector(state => state.user)
   const navigate = useNavigate()
+  const dispatch= useDispatch()
 
   useEffect(()=>{
           axios.get(`${BaseUrl}/room/${params.id}`)
@@ -31,11 +33,13 @@ const SingleRoom = () => {
   },[itemData])
   
 
-  const handlePay = (date)=>{
+  const handlePay = (date,amount)=>{
+ console.log("Data", date, amount);
     let arg = {
       roomId : params.id,
       date : date,
-      tokens : tokens
+      tokens : tokens,
+      amount : amount
     }  
 
     setArg(arg)
@@ -46,19 +50,22 @@ const SingleRoom = () => {
      navigate("/signup")
     }
    
-    if(tokens){
+    if(tokens && arg.date.length){
+      dispatch(setPayMentArgument(arg))
       navigate("/payment")
     }
-    
+
     }
     
    
   
   return (
     <div className='singleRoomWrapper'>
+        <button className="ml-4 btn btn-dark" style={{width : "150px", marginTop : "80px"}} onClick={() => navigate(-1)}><i class="fa fa-arrow-circle-left" aria-hidden="true"></i>Go back</button> 
      <div className='container'>
+
      <div className='row'>
-          <div className='col-lg-8 offset-lg-2 text-center' style={{marginTop : "80px"}}>
+          <div className='col-lg-8 offset-lg-2 text-center' style={{marginTop : "10px"}}>
             {
               images  && ( <ImageGallery items={images} />)
             }
@@ -84,7 +91,7 @@ const SingleRoom = () => {
 
                    </div>
                  </div>
-                 <div className=' my-4 col-lg-6 col-md-12 order-lg-1 col-md-0'>
+                 <div className=' my-4 col-lg-6 col-md-6 order-lg-1 col-md-0'>
                  
            <Calender roomPrice={itemData?.price} getDate={handlePay}></Calender>
 

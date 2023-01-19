@@ -12,10 +12,10 @@ const Navbar = () => {
     <div className='navbarWrapper'>
     <div className='container'>
     <nav className="navbar navbar-expand-md ">
- <NavLink className="navbar-brand brandName" to="/" style={{color : "#fff",fontSize : "24px"}} onCopy="return false">EasyBook</NavLink>
-  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span className="navbar-toggler-icon">
-    <i class="fa fa-bars" aria-hidden="true"></i>
+ <NavLink className="navbar-brand brandName" to="/" style={{color : "#fff",fontSize : "30px",fontWeight : "bold"}} onCopy="return false">Easy<span style={{color : "red"}}>Book</span></NavLink>
+  <button className="navbar-toggler" style={{border : "none"}} type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span className="navbar-toggler-icon"  style={{background : "red"}}>
+    <i class="fa fa-bars" aria-hidden="true" style={{color : "#fff",fontSize : "24px"}}></i>
     </span>
   </button>
   <div className="collapse navbar-collapse" id="navbarNav">
@@ -29,9 +29,7 @@ const Navbar = () => {
        <NavLink className={(navInfo)=> (navInfo.isActive ? "activeNavbar nav-link" : "nav-link") }  to="/room">Room</NavLink>
       </li>
 
-      <li className="nav-item">
-     <NavLink className={(navInfo)=> (navInfo.isActive ? "activeNavbar nav-link" : "nav-link") }  to="/dashboard">Dashboard</NavLink>
-    </li>
+      
  {
   !tokens ? (
    <>
@@ -44,9 +42,14 @@ const Navbar = () => {
   </li>
   </>
   ) : (
-<li className="nav-item">
+    <>
+    <li className="nav-item">
+     <NavLink className={(navInfo)=> (navInfo.isActive ? "activeNavbar nav-link" : "nav-link") }  to="/dashboard">Dashboard</NavLink>
+    </li>
+<li className="nav-item ">
    <NavLink className="nav-link logout" to="/" onClick={()=>dispatch(logout())}>Logout</NavLink>
   </li>
+  </>
   )
  }
 

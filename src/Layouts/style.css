@@ -20,7 +20,9 @@
     color: #fff ;
     text-decoration: none;
 }
-
+.navbar-toggler:focus {
+    outline: none;
+}
 .nav-item .nav-link {
     color: #fff;
     font-size: 1.5vw;
@@ -43,10 +45,14 @@
     /* font-weight: bold; */
     font-family: 'Chakra Petch', sans-serif;
     margin-left: 5px;
-    border-radius: 5px;
+    border-radius: 5px !important;
    
     
 }
+
+
+
+
 .navbar-toggler-icon {
     background-color: rgb(202, 69, 69);
     color: #fff;
@@ -63,6 +69,10 @@
         width: 40vw;
         font-size: 3vw;
     }
+    .logoutBtn {
+        margin-left: 0%;
+    }
+    
 }
 
 @media (max-width: 478px){
@@ -75,7 +85,7 @@
 
 
 .footerWrapper {
-    padding: 50px;
+    padding: 30px;
     background-color: rgba(17, 16, 16, 0.76);
     color: #fff;
     
@@ -109,4 +119,17 @@
     color: #fff;
     text-align: center;
     padding: 10px;
+}
+
+
+.logoutBtn {
+    margin-left: 100%;
+    /* color: rgb(202, 69, 69) !important; */
+    background-color: rgb(122, 8, 8);
+    font-size: 1.8vw;
+    /* font-weight: bold; */
+    font-family: 'Chakra Petch', sans-serif;
+    color: black !important;
+    border-radius: 5px;
+    padding: 3px 0px;
 }
