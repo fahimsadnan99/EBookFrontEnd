@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./style.css";
 import { Formik,Field,Form,FieldArray ,ErrorMessage }  from 'formik'
 import { initialValues, validationSchema } from "../../Components/Common/signUpValidation";
@@ -6,7 +6,7 @@ import ChildComponent from "../../Components/Common/FormChild"
 import { Link,useNavigate } from "react-router-dom";
 import { Spin } from 'antd';
 import {  toast, ToastContainer } from 'react-toastify';
-import {clearMsg} from "../../Redux/Reducers/UserReducer"
+import {clearLoading, clearMsg} from "../../Redux/Reducers/UserReducer"
 import { SignUp } from "../../Redux/utilsFunc/Signup";
 import { useDispatch,useSelector } from "react-redux";
 
@@ -38,7 +38,9 @@ const Signup = () => {
   dispatch(SignUp({...e, email : e.email.toLowerCase()}))
 }    
 
-
+useEffect(()=>{
+  dispatch(clearLoading())
+},[])
 
   return (
     <div className="signupWrapper">

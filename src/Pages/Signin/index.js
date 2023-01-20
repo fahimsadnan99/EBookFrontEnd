@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../Signup/style.css";
 import { Formik,Field,Form,FieldArray ,ErrorMessage }  from 'formik'
 import { initialValuesSignin, validationSchemaSignin } from "../../Components/Common/signUpValidation";
@@ -7,7 +7,7 @@ import {Link, useNavigate} from "react-router-dom"
 import { Spin } from 'antd';
 import {useDispatch, useSelector} from "react-redux"
 import { SignIn } from "../../Redux/utilsFunc/Signup";
-import { clearMsg } from "../../Redux/Reducers/UserReducer";
+import { clearMsg,clearLoading } from "../../Redux/Reducers/UserReducer";
 import {  toast } from 'react-toastify';
 
 const Signin = () => {
@@ -28,6 +28,10 @@ const Signin = () => {
 
         dispatch(SignIn({...e, email : e.email.toLowerCase()}))
 }    
+
+useEffect(()=>{
+  dispatch(clearLoading())
+},[])
 
   return (
     <div className="signupWrapper">

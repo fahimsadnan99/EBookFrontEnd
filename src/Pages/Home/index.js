@@ -8,12 +8,14 @@ import WhyEasyBook from '../../Components/Home/WhyEasyBook'
 import "./style.css"
 import { useDispatch } from 'react-redux'
 import { clearPaymentData } from '../../Redux/Reducers/PaymentReducer'
+import { clearLoading } from '../../Redux/Reducers/UserReducer'
 
 const Home = () => {
 
   const dispatch = useDispatch()
   useEffect(()=>{
    dispatch(clearPaymentData())
+   dispatch(clearLoading())
   },[])
   return (
     <div style={{overflowX : "hidden"}}>

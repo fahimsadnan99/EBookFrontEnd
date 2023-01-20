@@ -44,12 +44,13 @@ let UserReducer = createSlice({
             state.loading = false
             state.success = ""
             state.tokens = action.payload
-        }
+        },
+        clearLoading(state,action){state.loading = false},
 
     }
 
     
 })
 
-export const {signInReducer,logout,signUpReducer,errorReducer,loading,clearMsg} = UserReducer.actions
+export const {signInReducer,logout,signUpReducer,errorReducer,loading,clearMsg,clearLoading} = UserReducer.actions
 export default UserReducer.reducer
