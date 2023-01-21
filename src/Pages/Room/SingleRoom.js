@@ -8,6 +8,7 @@ import axios from 'axios'
 import ImageGallery from 'react-image-gallery';
 import { useSelector ,useDispatch} from 'react-redux'
 import { setPayMentArgument } from '../../Redux/Reducers/PaymentReducer'
+import LoadingAnimation from "../../Components/Common/LoadingAnimation"
 
 
 const SingleRoom = () => {
@@ -20,12 +21,7 @@ const SingleRoom = () => {
   const navigate = useNavigate()
   const dispatch= useDispatch()
 
-  useEffect(()=>{
-          axios.get(`${BaseUrl}/room/${params.id}`)
-          .then(res => setItemData(res.data))
-          .catch(err => console.error(err))
-  },[])
-
+ 
   
   useEffect(()=>{
   let img =  itemData?.img?.map(imte => ({original : imte, thumbnail:imte}))
@@ -57,8 +53,24 @@ const SingleRoom = () => {
 
     }
     
-   
-  
+    useEffect(()=>{
+      setLoading(true)
+      axios.get(`${BaseUrl}/room/${params.id}`)
+      .then(res => {
+        setLoading(false)
+        setItemData(res.data)
+      })
+      .catch(err => {
+        setLoading(false)
+        console.error(err)
+      })
+},[])
+
+  if(loading){
+    return (
+    <LoadingAnimation></LoadingAnimation>
+    )
+  }
   return (
     <div className='singleRoomWrapper'>
         <button className="ml-4 btn btn-dark" style={{width : "150px", marginTop : "80px"}} onClick={() => navigate(-1)}><i class="fa fa-arrow-circle-left" aria-hidden="true"></i>Go back</button> 

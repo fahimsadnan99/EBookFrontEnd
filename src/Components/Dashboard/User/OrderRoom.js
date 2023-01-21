@@ -7,12 +7,14 @@ import "./style.css"
 import "react-datepicker/dist/react-datepicker.css";
 import axios from "axios";
 import { BaseUrl } from "../../../api/api";
+import LoadingAnimation from "../../Common/LoadingAnimation";
 
 const OrderRoom = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [itemData, setItemData] = useState();
   const [images, setImages] = useState([]);
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     let img = itemData?.roomId
@@ -21,13 +23,24 @@ const OrderRoom = () => {
   }, [itemData]);
 
   useEffect(() => {
+    setLoading(true)
     axios
       .get(`${BaseUrl}/user/room/${id}`)
-      .then((res) => setItemData(res.data))
-      .catch((err) => console.error(err));
+      .then((res) => {
+        setLoading(false)
+        setItemData(res.data)
+      })
+      .catch((err) => {
+        setLoading(false)
+        console.error(err)
+      });
   }, []);
 
-  console.log(navigate);
+  if(loading){
+    return (
+    <LoadingAnimation></LoadingAnimation>
+    )
+  }
   return (
     <div className="singleRoomWrapper">
        <button className="ml-4 btn btn-dark" style={{width : "150px", marginTop : "80px"}} onClick={() => navigate(-1)}><i class="fa fa-arrow-circle-left" aria-hidden="true"></i>Go back</button> 
